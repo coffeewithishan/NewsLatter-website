@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Global css */
+.obj-width {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E9B872;
+    color: white;
+    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-left: 80px;
+}
+
+#searchBox {
+    max-width: 600px;
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    padding-left: 18px;
+}
+
+#navButton {
+    padding: 10px 20px;
+    background-color: #A63D40;
+    color: white;
+    border: none;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px; /* Space between input and button */
+}
+
+#blockContainer {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.blockCard {
+    width: 280px;
+    border: 1px solid #E9B872;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 10px;
+}
+
+.blockCard img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.blockCard h2 {
+    color: #151515;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.blockCard p {
+    font-size: 1.2rem;
+    padding-top: 0.7rem;
+}
+
+.blockCard:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media(max-width: 500px) {
+    .blockCard {
+        width: 100%;
+    }
+
+    .nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        height: auto; /* Allow height to be auto */
+        padding: 10px; /* Add some padding */
+    }
+
+    .logo a {
+        margin-left: 0; /* Remove left margin */
+        font-size: 24px; /* Reduce font size for better fit */
+    }
+
+    .inputs&buttons {
+        width: 100%; /* Make inputs and buttons take full width */
+        display: flex; /* Use flexbox for alignment */
+        margin-top: 10px; /* Add some space above */
+        align-items: center; /* Center items vertically */
+    }
+
+    #searchBox {
+        width: calc(100% - 110px); /* Adjust width to fit with button */
+        height: 40px; /* Ensure consistent height */
+        border-radius: 5px; /* Optional: Add rounded corners */
+        border: 1px solid #ccc; /* Optional: Add border */
+        padding: 0 10px; /* Optional: Add padding inside the input */
+    }
+
+    #navButton {
+        width: 100px; /* Set a fixed width for the button */
+        height: 40px; /* Ensure the button has the same height as the input */
+        margin-left: 0; /* Remove left margin */
+        display: flex; /* Keep the button as a flex item */
+        align-items: center; /* Center icon vertically */
+        background-color: #A63D40; /* Match button color */
+        color: white; /* Set button text color */
+        border: none; /* Remove default border */
+        border-radius: 4px; /* Optional: Add rounded corners */
+        cursor: pointer; /* Change cursor on hover */
+    }
+}
